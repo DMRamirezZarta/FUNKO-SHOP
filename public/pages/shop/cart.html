@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
+    <link rel="stylesheet" href="/css/index.css">
+    <title> Shop | Funkoshop </title>
+</head>
+
+<body>
+
+    <header> <!-- Inicio Header -->
+
+        
+        <!-- Si no está logueado, muestra este otro header -->
+
+        <nav class="navbar container">
+            <picture class="navbar__logo">
+                <a href="/home">
+                    <img src="/img/branding/logo_light_horizontal.svg" alt="Isologotipo de la marca Funkoshop">
+                </a>
+            </picture>
+            <ul class="navbar__menu">
+                <li class="navbar__item with-submenu">
+                    <a class="navbar__link with-icon" href="/shop">SHOP<iconify-icon
+                            icon="tabler:chevron-down"></iconify-icon></a>
+                    <ul class="submenu">
+                        <li class="submenu__item">
+                            <a href="/shop/filter-category/funkos" class="submenu__link">Funkos</a>
+                        </li>
+                        <li class="submenu__item">
+                            <a href="/shop/filter-category/remeras" class="submenu__link">Remeras</a>
+                        </li>
+                        <li class="submenu__item">
+                            <a href="/shop/filter-category/llaveros" class="submenu__link">Llaveros</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a class="navbar__link" href="/contact">CONTACTO</a>
+                </li class="navbar__item">
+                <li>
+                    <a class="navbar__link" href="/auth/login">LOGIN</a>
+                </li>
+                <li class="navbar__item">
+                    <a class="navbar__cart" href="/shop/cart">
+                        <img src="/img/icons/cart-icon.svg" alt="Ícono del carrito de compras">
+
+                        <!-- CART BADGE -->
+                        
+
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        
+    </header> <!-- Fin Header -->
+
+<main class="container cart__main"">
+    <h2 class=" cart__title">CARRITO DE COMPRAS</h2>
+
+    <div class="cart__header">
+        <p>DETALLE DE PRODUCTO</p>
+        <p>CANTIDAD</p>
+        <p>TOTAL</p>
+    </div>
+
+    
+
+    <ul class="cart__component-container">
+        <li class="cart__component">
+            <p>
+                Tu carrito está vacío
+            </p>
+        </li>
+    </ul>
+
+    
+
+
+
+    <section class="cart__summary">
+
+        <h2 class="cart__title cart__summary-title">RESUMEN</h2>
+
+        <ul class="cart__summary-container">
+            <li class="cart__summary-line">
+                <span class="cart__summary-text">CANTIDAD DE ELEMENTOS</span>
+                <span class="cart__summary-data" id="">
+                    0
+                </span>
+            </li>
+            <li class="cart__summary-line">
+                <span class="cart__summary-text">SUBTOTAL</span>
+                <span class="cart__summary-data" id="">
+                    $ 0,00
+                </span>
+            </li>
+            <li class="cart__summary-line">
+                <span class="cart__summary-text">ENVÍO</span>
+                <span class="cart__summary-data" id="">$ 0,00</span>
+            </li>
+            <div class="cart__summary-border"></div>
+            <li class="cart__summary-line-total">
+                <span class="cart__summary-text-total">TOTAL</span>
+                <span class="cart__summary-data-total" id="">
+                    $ 0,00
+                </span>
+            </li>
+        </ul>
+
+        <a class="cart__summary-pay-button" href="#">IR A PAGAR</a>
+
+    </section>
+
+</main>
+
+
+<script src="/js/cart.js"></script>
+<footer class="footer">
+    <nav class="navbar container">
+        <ul class="navbar__item">
+            <li class="navbar__item">
+                <a class="navbar__link" href="/shop">SHOP</a>
+            </li>
+            <li class="navbar__item">
+                <a class="navbar__link" href="/auth/register">REGISTRARSE</a>
+            </li>
+            <li class="navbar__item">
+                <a class="navbar__link" href="/auth/login">INGRESAR</a>
+            </li>
+            <li class="navbar__item">
+                <a class="navbar__link" href="/contact">CONTACTO</a>
+            </li>
+        </ul>
+        <picture>
+            <img src="/img/branding/isotype.svg" alt="Isotipo de la marca Funkopop">
+        </picture>
+    </nav>
+
+    <p class="footer__copy">All rights reserved 2023 - Funkoshop &copy;</p>
+
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
+
+</body>
+
+</html>
