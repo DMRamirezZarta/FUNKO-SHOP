@@ -8,4 +8,5 @@
 .footer__copy {
     margin-top: var(--spacing-36);
     text-align: center;
+    font-size: var(--font-small);
 }

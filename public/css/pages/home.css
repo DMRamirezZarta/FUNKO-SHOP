@@ -1,7 +1,7 @@
 /* HERO */
 
 .hero {
-    background-image: url(../../img/multimedia/funkos-banner.webp);
+    background-image: url(../../img/funkos-banner.webp);
     padding: var(--spacing-128);
     background-position: top;
     background-size: cover;
@@ -77,7 +77,7 @@
     align-items: start;
 }
 
-.collection__title {
+.collection__tittle {
     font-family: var(--alternative-font);
     font-size: var(--font-display);
     font-weight: 500;
