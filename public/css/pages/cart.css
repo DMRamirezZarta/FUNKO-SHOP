@@ -98,7 +98,7 @@ button {
     position: relative;
     font-size: var(--font-xsmall);
     color: var(--light-font-solid);
-    background-color: var(--dark-700);
+    background-color: var(--dark-bg-solid);
     border: none;
     width: 1.8rem;
     transition: background .3s ease-in-out;

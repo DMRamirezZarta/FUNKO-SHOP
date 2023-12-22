@@ -11,53 +11,42 @@
 
 <body>
 
-    <header> <!-- Inicio Header -->
-
-        
-        <!-- Si no está logueado, muestra este otro header -->
-
+    <header class="page-header"> <!--inicio del header-->
         <nav class="navbar container">
             <picture class="navbar__logo">
-                <a href="/home">
-                    <img src="../../img/branding/logo_light_horizontal.svg" alt="Isologotipo de la marca Funkoshop">
+                <a href="../index.html">
+                    <img src="../../img/branding/logo_light_horizontal.svg" alt="isologotipo de la marac FunkoShop">
                 </a>
             </picture>
             <ul class="navbar__menu">
                 <li class="navbar__item with-submenu">
-                    <a class="navbar__link with-icon" href="/shop">SHOP<iconify-icon
-                            icon="tabler:chevron-down"></iconify-icon></a>
+                    <a class="navbar__link  with-icon" href="./shop.html">SHOP<iconify-icon icon="carbon:chevron-down"></iconify-icon></a>
                     <ul class="submenu">
                         <li class="submenu__item">
-                            <a href="../shop/shop.html" class="submenu__link">Funkos</a>
+                            <a class="submenu__link" href="./shop.html">Funkos</a>
                         </li>
                         <li class="submenu__item">
-                            <a href="../shop/shop.html" class="submenu__link">Remeras</a>
+                            <a class="submenu__link" href="./shop.html">Remeras</a>
                         </li>
                         <li class="submenu__item">
-                            <a href="" class="submenu__link">Llaveros</a>
+                            <a class="submenu__link" href="./shop.html">LLaveros</a>
                         </li>
                     </ul>
                 </li>
-                <li>
+                <li class="navbar__item">
                     <a class="navbar__link" href="./contact.html">CONTACTO</a>
-                </li class="navbar__item">
-                <li>
-                    <a class="navbar__link" href="../admin/login.html">LOGIN</a>
                 </li>
                 <li class="navbar__item">
-                    <a class="navbar__cart" href="./cart.html">
-                        <img src="../../img/icons/cart-icon.svg" alt="Ícono del carrito de compras">
-
-                        <!-- CART BADGE -->
-                        
-
+                    <a class="navbar__link" href="../admin/login.html">LOGIN</a>
+                </li>
+                <li class="navbar__">
+                    <a class="navbar__cart" href="./shop/cart.html">
+                        <img src="../../img/icons/cart-icon.svg" alt="icono de carrito">
                     </a>
                 </li>
             </ul>
         </nav>
-
-        
-    </header> <!-- Fin Header -->
+    </header>  <!--fin del header-->
 
 <main class="container cart__main"">
     <h2 class=" cart__title">CARRITO DE COMPRAS</h2>
@@ -69,12 +58,84 @@
     </div>
 
     
-
-    <ul class="cart__component-container">
+    <ul id="card_[object Object],[object Object]" class="cart__component-container">
         <li class="cart__component">
-            <p>
-                Tu carrito está vacío
+            <article>
+                <img src="../../img/pokemon/pidgeotto-1.webp" alt="Figura Funko">
+                <div class="cart__component-info">
+                    <p class="cart__component-title">
+                        Pidgeotto
+                    </p>
+                    <p class="cart__component-licence">
+                        Pokemon
+                    </p>
+                    <p class="cart__component-price">Precio unitario: $ 34.990,00</p>
+                </div>
+            </article>
+
+            <div class="cart__component-quantity-container">
+                <div class="cart__component-quantity">
+                    <input id="quantity_7" class="item__input" type="text" name="quantity"
+                        value="1">
+                    <button onclick="addToCart('7', '1', 1)" id="add_7"
+                        class="cart__component-quantity-button" type="button">+</button>
+                    <button onclick="addToCart('7', '1', -1)" id="subtract_7" class="cart__component-quantity-button"
+                        type="button">-</button>
+                </div>
+            </div>
+
+            <p class="cart__component-price-total">
+                $ 34.990,00
             </p>
+
+            <form action="./cart2.html/7?_method=DELETE" method="POST">
+                <input type="hidden" name="_method" value="DELETE">
+                <button type="submit" class="cart__button-cancel">
+                    <iconify-icon icon="octicon:x-circle-16"></iconify-icon>
+                </button>
+            </form>
+
+        </li>
+    </ul>
+
+    
+    <ul id="card_[object Object],[object Object]" class="cart__component-container">
+        <li class="cart__component">
+            <article>
+                <img src="../../img/star-wars/baby-yoda-1.webp" alt="Figura Funko">
+                <div class="cart__component-info">
+                    <p class="cart__component-title">
+                        Grogu
+                    </p>
+                    <p class="cart__component-licence">
+                        Star Wars
+                    </p>
+                    <p class="cart__component-price">Precio unitario: $ 42.990,00</p>
+                </div>
+            </article>
+
+            <div class="cart__component-quantity-container">
+                <div class="cart__component-quantity">
+                    <input id="quantity_10" class="item__input" type="text" name="quantity"
+                        value="1">
+                    <button onclick="addToCart('10', '1', 1)" id="add_10"
+                        class="cart__component-quantity-button" type="button">+</button>
+                    <button onclick="addToCart('10', '1', -1)" id="subtract_10" class="cart__component-quantity-button"
+                        type="button">-</button>
+                </div>
+            </div>
+
+            <p class="cart__component-price-total">
+                $ 42.990,00
+            </p>
+
+            <form action="/shop/cart/10?_method=DELETE" method="POST">
+                <input type="hidden" name="_method" value="DELETE">
+                <button type="submit" class="cart__button-cancel">
+                    <iconify-icon icon="octicon:x-circle-16"></iconify-icon>
+                </button>
+            </form>
+
         </li>
     </ul>
 
@@ -90,13 +151,13 @@
             <li class="cart__summary-line">
                 <span class="cart__summary-text">CANTIDAD DE ELEMENTOS</span>
                 <span class="cart__summary-data" id="">
-                    0
+                    2
                 </span>
             </li>
             <li class="cart__summary-line">
                 <span class="cart__summary-text">SUBTOTAL</span>
                 <span class="cart__summary-data" id="">
-                    $ 0,00
+                    $ 77.980,00
                 </span>
             </li>
             <li class="cart__summary-line">
@@ -107,7 +168,7 @@
             <li class="cart__summary-line-total">
                 <span class="cart__summary-text-total">TOTAL</span>
                 <span class="cart__summary-data-total" id="">
-                    $ 0,00
+                    $ 77.980,00
                 </span>
             </li>
         </ul>
@@ -120,6 +181,7 @@
 
 
 <script src="/js/cart.js"></script>
+
 <footer class="footer">
     <nav class="navbar container">
         <ul class="navbar__item">
