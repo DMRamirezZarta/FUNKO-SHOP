@@ -10,7 +10,7 @@ const adminRoutes = require('./src/routes/admin.routes');
 const authRoutes = require('./src/routes/auth.routes');
 
 
-const PORT = 4002;
+const PORT = 4000;
 
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, './src/views'));
